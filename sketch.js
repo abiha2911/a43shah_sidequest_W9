@@ -331,23 +331,17 @@ function drawDebugScreen(grounded) {
   camera.off();
 
   push();
-  fill(0, 160);
+  fill(0, 180);
   noStroke();
-
-  // smaller box on top right
-  rect(width - 170, 10, 160, 70, 6);
+  rect(10, 10, 220, 105, 8);
 
   fill(255);
-  textSize(10);
-
-  let x = width - 160;
-  let y = 25;
-
-  text("DEBUG", x, y);
-  text("M: Gravity " + (moonGravityOn ? "ON" : "OFF"), x, y + 15);
-  text("B: Hitbox " + (showHitboxes ? "ON" : "OFF"), x, y + 30);
-  text("R: Reset", x, y + 45);
-
+  textSize(12);
+  text("DEBUG SCREEN", 20, 30);
+  text("M: Moon Gravity = " + (moonGravityOn ? "ON" : "OFF"), 20, 50);
+  text("B: Hitboxes = " + (showHitboxes ? "ON" : "OFF"), 20, 67);
+  text("R: Reset Player", 20, 84);
+  text("Grounded: " + grounded, 20, 101);
   pop();
 
   camera.on();
